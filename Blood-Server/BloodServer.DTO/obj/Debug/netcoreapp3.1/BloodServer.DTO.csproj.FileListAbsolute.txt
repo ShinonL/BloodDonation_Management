@@ -1,0 +1,12 @@
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\bin\Debug\netcoreapp3.1\BloodServer.DTO.deps.json
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\bin\Debug\netcoreapp3.1\BloodServer.DTO.runtimeconfig.json
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\bin\Debug\netcoreapp3.1\BloodServer.DTO.runtimeconfig.dev.json
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\bin\Debug\netcoreapp3.1\BloodServer.DTO.dll
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\bin\Debug\netcoreapp3.1\BloodServer.DTO.pdb
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\obj\Debug\netcoreapp3.1\BloodServer.DTO.csprojAssemblyReference.cache
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\obj\Debug\netcoreapp3.1\BloodServer.DTO.AssemblyInfoInputs.cache
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\obj\Debug\netcoreapp3.1\BloodServer.DTO.AssemblyInfo.cs
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\obj\Debug\netcoreapp3.1\BloodServer.DTO.csproj.CoreCompileInputs.cache
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\obj\Debug\netcoreapp3.1\BloodServer.DTO.dll
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\obj\Debug\netcoreapp3.1\BloodServer.DTO.pdb
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.DTO\obj\Debug\netcoreapp3.1\BloodServer.DTO.genruntimeconfig.cache
