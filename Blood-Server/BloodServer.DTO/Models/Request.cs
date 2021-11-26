@@ -18,6 +18,6 @@ namespace BloodServer.DTO.Models
         public int? BloodId { get; set; }
 
         public virtual BloodType Blood { get; set; }
-        public virtual Staff Staff { get; set; }
+        public virtual staff Staff { get; set; }
     }
 }

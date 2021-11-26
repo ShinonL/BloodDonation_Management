@@ -25,7 +25,7 @@ namespace BloodServer.DTO.Models
         public virtual DbSet<Request> Requests { get; set; }
         public virtual DbSet<Stock> Stocks { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Staff> staff { get; set; }
+        public virtual DbSet<staff> staff { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -188,7 +188,7 @@ namespace BloodServer.DTO.Models
                     .HasConstraintName("FK_Users_BloodType");
             });
 
-            modelBuilder.Entity<Staff>(entity =>
+            modelBuilder.Entity<staff>(entity =>
             {
                 entity.ToTable("Staff");
 
@@ -211,12 +211,12 @@ namespace BloodServer.DTO.Models
                 entity.Property(e => e.Username).HasMaxLength(50);
 
                 entity.HasOne(d => d.Authorization)
-                    .WithMany(p => p.Staff)
+                    .WithMany(p => p.staff)
                     .HasForeignKey(d => d.AuthorizationId)
                     .HasConstraintName("FK_Staff_Authorizations");
 
                 entity.HasOne(d => d.Hospital)
-                    .WithMany(p => p.Staff)
+                    .WithMany(p => p.staff)
                     .HasForeignKey(d => d.HospitalId)
                     .HasConstraintName("FK_Staff_Hospitals");
             });

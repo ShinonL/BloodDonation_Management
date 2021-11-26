@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace BloodServer.DTO.Models
 {
-    public partial class Staff
+    public partial class staff
     {
-        public Staff()
+        public staff()
         {
             Requests = new HashSet<Request>();
         }

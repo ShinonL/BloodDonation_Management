@@ -1,0 +1,31 @@
+#background {
+    height: 90vh;
+    background-image: url("../../assets/resources/HomeScreen.png"); 
+    background-size: 100%;
+    background-repeat: no-repeat; 
+
+    overflow: hidden;
+}
+
+h1 {
+    font-family: Rajdhani;
+    font-size: 10vw;
+    color: #b20909;
+    font-weight: bolder;
+
+    margin: 0;
+}
+
+h2 {
+    font-family: Rajdhani;
+    font-size: 5vw;
+    color: #b20909;
+    font-weight: bolder;
+
+    margin: 0;
+}
+
+.center {
+    margin-top: 15%;
+    text-align: center;
+}

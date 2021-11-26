@@ -11,7 +11,7 @@ namespace BloodServer.DTO.Models
         {
             Appointments = new HashSet<Appointment>();
             Stocks = new HashSet<Stock>();
-            Staff = new HashSet<Staff>();
+            staff = new HashSet<staff>();
         }
 
         public int Id { get; set; }
@@ -21,6 +21,6 @@ namespace BloodServer.DTO.Models
 
         public virtual ICollection<Appointment> Appointments { get; set; }
         public virtual ICollection<Stock> Stocks { get; set; }
-        public virtual ICollection<Staff> Staff { get; set; }
+        public virtual ICollection<staff> staff { get; set; }
     }
 }
