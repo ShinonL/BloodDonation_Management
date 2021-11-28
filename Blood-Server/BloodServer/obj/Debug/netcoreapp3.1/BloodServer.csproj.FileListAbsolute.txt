@@ -63,3 +63,7 @@ D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer\obj\D
 D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer\obj\Debug\netcoreapp3.1\BloodServer.genruntimeconfig.cache
 D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer\bin\Debug\netcoreapp3.1\BloodServer.DTO.dll
 D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer\bin\Debug\netcoreapp3.1\BloodServer.DTO.pdb
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer\bin\Debug\netcoreapp3.1\BloodServer.Repository.dll
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer\bin\Debug\netcoreapp3.1\BloodServer.Repository.pdb
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer\bin\Debug\netcoreapp3.1\BloodServer.Service.dll
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer\bin\Debug\netcoreapp3.1\BloodServer.Service.pdb

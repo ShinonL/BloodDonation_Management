@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BloodServer.DTO\BloodServer.DTO.csproj" />
+    <ProjectReference Include="..\BloodServer.Repository\BloodServer.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

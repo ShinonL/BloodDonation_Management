@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Login</h2>
+
+<mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput [formControl]="username" placeholder="Ex: ana.marinescu">
+        <mat-error *ngIf="username.value == ''">Please insert a username</mat-error>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="outline" color="warn">
+        <mat-label>Password</mat-label>
+        <input matInput [formControl]="password" type="password">
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close="register">Register</button>
+  <button mat-button mat-dialog-close="login" cdkFocusInitial>Login</button>
+</mat-dialog-actions>

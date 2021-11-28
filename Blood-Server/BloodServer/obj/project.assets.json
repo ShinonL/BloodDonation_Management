@@ -1534,6 +1534,35 @@
         "runtime": {
           "bin/placeholder/BloodServer.DTO.dll": {}
         }
+      },
+      "BloodServer.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "BloodServer.DTO": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11"
+        },
+        "compile": {
+          "bin/placeholder/BloodServer.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BloodServer.Repository.dll": {}
+        }
+      },
+      "BloodServer.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "BloodServer.DTO": "1.0.0",
+          "BloodServer.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BloodServer.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BloodServer.Service.dll": {}
+        }
       }
     }
   },
@@ -5807,11 +5836,23 @@
       "type": "project",
       "path": "../BloodServer.DTO/BloodServer.DTO.csproj",
       "msbuildProject": "../BloodServer.DTO/BloodServer.DTO.csproj"
+    },
+    "BloodServer.Repository/1.0.0": {
+      "type": "project",
+      "path": "../BloodServer.Repository/BloodServer.Repository.csproj",
+      "msbuildProject": "../BloodServer.Repository/BloodServer.Repository.csproj"
+    },
+    "BloodServer.Service/1.0.0": {
+      "type": "project",
+      "path": "../BloodServer.Service/BloodServer.Service.csproj",
+      "msbuildProject": "../BloodServer.Service/BloodServer.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "BloodServer.DTO >= 1.0.0",
+      "BloodServer.Repository >= 1.0.0",
+      "BloodServer.Service >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.11"
@@ -5854,6 +5895,12 @@
           "projectReferences": {
             "D:\\Facultate\\An3_Sem1\\SE\\BloodDonation_Management\\Blood-Server\\BloodServer.DTO\\BloodServer.DTO.csproj": {
               "projectPath": "D:\\Facultate\\An3_Sem1\\SE\\BloodDonation_Management\\Blood-Server\\BloodServer.DTO\\BloodServer.DTO.csproj"
+            },
+            "D:\\Facultate\\An3_Sem1\\SE\\BloodDonation_Management\\Blood-Server\\BloodServer.Repository\\BloodServer.Repository.csproj": {
+              "projectPath": "D:\\Facultate\\An3_Sem1\\SE\\BloodDonation_Management\\Blood-Server\\BloodServer.Repository\\BloodServer.Repository.csproj"
+            },
+            "D:\\Facultate\\An3_Sem1\\SE\\BloodDonation_Management\\Blood-Server\\BloodServer.Service\\BloodServer.Service.csproj": {
+              "projectPath": "D:\\Facultate\\An3_Sem1\\SE\\BloodDonation_Management\\Blood-Server\\BloodServer.Service\\BloodServer.Service.csproj"
             }
           }
         }

@@ -1,0 +1,15 @@
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\bin\Debug\netcoreapp3.1\BloodServer.Repository.deps.json
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\bin\Debug\netcoreapp3.1\BloodServer.Repository.dll
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\bin\Debug\netcoreapp3.1\BloodServer.Repository.pdb
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\obj\Debug\netcoreapp3.1\BloodServer.Repository.AssemblyInfoInputs.cache
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\obj\Debug\netcoreapp3.1\BloodServer.Repository.AssemblyInfo.cs
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\obj\Debug\netcoreapp3.1\BloodServer.Repository.csproj.CoreCompileInputs.cache
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\obj\Debug\netcoreapp3.1\BloodServer.Repository.dll
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\obj\Debug\netcoreapp3.1\BloodServer.Repository.pdb
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\bin\Debug\netcoreapp3.1\BloodServer.Repository.runtimeconfig.json
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\bin\Debug\netcoreapp3.1\BloodServer.Repository.runtimeconfig.dev.json
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\obj\Debug\netcoreapp3.1\BloodServer.Repository.csprojAssemblyReference.cache
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\obj\Debug\netcoreapp3.1\BloodServer.Repository.genruntimeconfig.cache
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\bin\Debug\netcoreapp3.1\BloodServer.DTO.dll
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\bin\Debug\netcoreapp3.1\BloodServer.DTO.pdb
+D:\Facultate\An3_Sem1\SE\BloodDonation_Management\Blood-Server\BloodServer.Repository\obj\Debug\netcoreapp3.1\BloodServer.Repository.csproj.CopyComplete
