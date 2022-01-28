@@ -1,0 +1,62 @@
+<h2 mat-dialog-title>Register a new account</h2>
+
+<mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput [formControl]="username" placeholder="Ex: ana.marinescu">
+        <mat-error *ngIf="username.value == ''">Please insert a username</mat-error>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill" color="warn">
+        <mat-label>Password</mat-label>
+        <input matInput [formControl]="password" type="password">
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput [formControl]="firstName" placeholder="Ex: Ana">
+        <mat-error *ngIf="firstName.value == ''">Please insert a first name</mat-error>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput [formControl]="lastName" placeholder="Ex: Marinescu">
+        <mat-error *ngIf="lastName.value == ''">Please insert a last name</mat-error>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Phone Number</mat-label>
+        <input type="tel" matInput [formControl]="phone" placeholder="Ex: 0712345678">
+        <mat-error *ngIf="phone.value == ''">Please insert a phone number</mat-error>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Hospital</mat-label>
+        <mat-select [(ngModel)]="hospitalId">
+            <mat-option *ngFor="let hospital of hosppitals" [value]="hospital.id">{{ hospital.name }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Role</mat-label>
+        <mat-select [(ngModel)]="roleId">
+            <mat-option *ngFor="let role of roles" [value]="role.id">{{ role.role }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close="test" cdkFocusInitial (click)="onRegister()">Register</button>
+</mat-dialog-actions>
