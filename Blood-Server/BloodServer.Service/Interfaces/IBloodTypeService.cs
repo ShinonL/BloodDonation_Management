@@ -9,5 +9,6 @@ namespace BloodServer.Service.Interfaces
     public interface IBloodTypeService
     {
         public Task<IEnumerable<BloodTypeDTO>> GetBloodTypes();
+        public BloodTypeDTO GetById(int id);
     }
 }

@@ -51,6 +51,19 @@ namespace BloodServer
 
             services.AddScoped<IBloodTypeRepository, BloodTypeRepository>();
             services.AddScoped<IBloodTypeService, BloodTypeService>();
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
+
+            services.AddScoped<IHospitalRepository, HospitalRepository>();
+            services.AddScoped<IHospitalService, HospitalService>();
+
+            services.AddScoped<IStocksRepository, StocksRepository>();
+            services.AddScoped<IStocksService, StocksService>();
+
+
+            services.AddScoped<IRequestRepository, RequestRepository>();
+            services.AddScoped<IRequestService, RequestService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

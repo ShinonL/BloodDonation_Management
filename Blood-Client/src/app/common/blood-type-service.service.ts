@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BloodType } from '../models/BloodType';
+import { BloodTypeModel } from '../models/bloodType.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,7 @@ export class BloodTypeServiceService {
 
   constructor() { }
 
-  convertToString(bloodType: BloodType) {
+  convertToString(bloodType: BloodTypeModel) {
     return bloodType.blood + (bloodType.rh ? " +" : " -");
   }
 }

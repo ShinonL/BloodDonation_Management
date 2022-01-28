@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { BloodTypeServiceService } from '../common/blood-type-service.service';
-import { BloodType } from '../models/BloodType';
+import { BloodTypeModel } from '../models/bloodType.model';
 
 @Component({
   selector: 'app-register',
@@ -19,7 +20,7 @@ export class RegisterComponent implements OnInit {
   CNP: FormControl;
   bloodTypeId: string = '';
 
-  bloodTypes: BloodType[] = [];
+  bloodTypes: BloodTypeModel[] = [];
 
   constructor(private http: HttpClient, public bloodTypeService: BloodTypeServiceService) {
     this.username = new FormControl('', Validators.required);
@@ -33,13 +34,37 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.http
-      .get<BloodType[]>('https://localhost:44366/register/getBloodTypes')
+      .get<BloodTypeModel[]>('https://localhost:44366/blood/getBloodTypes')
       .subscribe((res) => {
         this.bloodTypes = res;
       });
   }
 
-  convertToString(bloodType: BloodType) {
+  convertToString(bloodType: BloodTypeModel) {
     return this.bloodTypeService.convertToString(bloodType);
+  }
+
+  onRegister() {
+    console.log(this.bloodTypeId);
+
+    var user = {
+      username : this.username.value,
+      password : this.password.value,
+      firstName : this.firstName.value,
+      lastName : this.lastName .value,
+      phone : this.phone.value,
+      email : this.email.value,
+      cnp : this.CNP.value,
+      bloodId : this.bloodTypeId
+    }
+
+    this.http.post('https://localhost:44366/register/create', user)
+      .subscribe(
+        (res) => {
+          sessionStorage.setItem('username', this.username.value);
+          sessionStorage.setItem('password', this.password.value);
+        }, 
+        (err) => console.log(err)
+      );
   }
 }

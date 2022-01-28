@@ -1,0 +1,40 @@
+.demo-table {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+h1 {
+  text-align: center;
+  color: #b20909;
+  background-color: white;
+  padding: 15px 0px;
+}
+
+#background {
+  height: 93vh;
+  background-image: url("../../assets/resources/background_1.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+td,
+th {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.mat-sort-header-container {
+  justify-content: center !important;
+}
+
+.trash-button {
+  text-align: right;
+  padding-right: 0rem;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}

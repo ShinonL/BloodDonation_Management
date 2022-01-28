@@ -2,8 +2,23 @@
   <a routerLink="/home">
     <img src="../../assets/resources/Logo.png">
   </a>
+  <button class="toolbar" mat-flat-button color="primary" routerLink="/bloodStocks">See Blood Stock</button>
+  <button class="toolbar" *ngIf="getSessionRole() == 'user'" mat-flat-button color="warn" (click)="onDonate()">Donate Now</button>
+  <button class="toolbar" *ngIf="getSessionRole() == 'user'" mat-flat-button color="primary" (click)="onAppointment()">My Appointments</button>
+  <button class="toolbar" *ngIf="getSessionRole() == 'user'" mat-flat-button color="primary" (click)="onRequest()">View Urgent Requests</button>
+  <button class="toolbar" 
+    *ngIf="getSessionRole() == 'Nurse' || getSessionRole() == 'Doctor'" 
+    mat-flat-button color="warn" (click)="onManageRequest()">
+      Manage Requests
+  </button>
+  <button class="toolbar" 
+    *ngIf="getSessionRole() == 'Nurse' || getSessionRole() == 'Doctor'" 
+    mat-flat-button color="primary" (click)="onViewUsers()">
+      View Users
+  </button>
   <span class="spacer"></span>
-  <button mat-flat-button color="warn" (click)="openLoginDialog()">Login / Register</button>
+  <button *ngIf="getSession()" mat-flat-button color="warn" (click)="openLoginDialog()">Login / Register</button>
+  <button *ngIf="!getSession()" mat-flat-button color="warn" (click)="onLogout()">Logout</button>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

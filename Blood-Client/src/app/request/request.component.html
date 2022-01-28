@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Register a new donation</h2>
+
+<mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="fill">
+        <mat-label>Patient's First Name</mat-label>
+        <input matInput [formControl]="targetFirstName" placeholder="Ex: Ana">
+        <mat-error *ngIf="targetFirstName.value == ''">Please insert a first name</mat-error>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Patient's Last Name</mat-label>
+        <input matInput [formControl]="targetLastName" placeholder="Ex: Marinescu">
+        <mat-error *ngIf="targetLastName.value == ''">Please insert a last name</mat-error>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Illness</mat-label>
+        <input matInput [formControl]="illness" placeholder="Car Accident">
+        <mat-error *ngIf="illness.value == ''">Please insert an illness</mat-error>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Blood Type</mat-label>
+        <mat-select [(ngModel)]="bloodTypeId">
+            <mat-option *ngFor="let bloodType of bloodTypes" [value]="bloodType.id">{{ convertToString(bloodType) }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close="test" cdkFocusInitial (click)="onRegister()">Register</button>
+</mat-dialog-actions>

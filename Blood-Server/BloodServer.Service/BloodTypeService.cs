@@ -28,5 +28,16 @@ namespace BloodServer.Service
                 Rh = bt.Rh
             }).ToList();
         }
+
+        public BloodTypeDTO GetById(int id)
+        {
+            var model = _bloodTypeRepository.GetById(id);
+            return new BloodTypeDTO
+            {
+                Id = model.Id,
+                Blood = model.Blood,
+                Rh = model.Rh
+            };
+        }
     }
 }

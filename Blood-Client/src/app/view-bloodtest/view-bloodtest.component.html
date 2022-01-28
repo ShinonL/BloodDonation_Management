@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Blood Test results:</h2>
+
+<mat-dialog-content class="mat-typography">
+  <p><b style="margin-right: 15px;">AIDS:</b> {{ (data.bloodTest.aids) ? 'Yes' : 'No' }}</p>
+  <p><b style="margin-right: 15px;">Leukemia:</b> {{ data.bloodTest.leukemia ? 'Yes' : 'No' }}</p>
+  <p><b style="margin-right: 15px;">Hepatitis B:</b> {{ data.bloodTest.hepatitisB ? 'Yes' : 'No' }}</p>
+  <p><b style="margin-right: 15px;">Hepatitis C:</b> {{ data.bloodTest.hepatitisC ? 'Yes' : 'No' }}</p>
+  <p><b style="margin-right: 15px;">Pox:</b> {{ data.bloodTest.pox ? 'Yes' : 'No'}}</p>
+  <p><b style="margin-right: 15px;">Thrombocytes:</b> {{ data.bloodTest.thrombocytes }}</p>
+  <p><b style="margin-right: 15px;">Hemoglobin:</b> {{ data.bloodTest.hemoglobin }}</p>
+  <p><b style="margin-right: 15px;">Cholesterol:</b> {{ data.bloodTest.cholesterol }}</p>
+  <p><b style="margin-right: 15px;">Leukocytes:</b> {{ data.bloodTest.leukocytes }}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close="login" cdkFocusInitial (click)="onClose()">Close</button>
+</mat-dialog-actions>

@@ -12,10 +12,11 @@
     <mat-form-field appearance="outline" color="warn">
         <mat-label>Password</mat-label>
         <input matInput [formControl]="password" type="password">
+        <mat-error *ngIf="password.value == ''">Please insert a password</mat-error>
     </mat-form-field>
 </mat-dialog-content>
 
-<mat-dialog-actions align="end">
+<mat-dialog-actions>
   <button mat-button mat-dialog-close="register">Register</button>
-  <button mat-button mat-dialog-close="login" cdkFocusInitial>Login</button>
+  <button mat-button mat-dialog-close="login" cdkFocusInitial (click)="onLogin()">Login</button>
 </mat-dialog-actions>

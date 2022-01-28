@@ -1,0 +1,77 @@
+<h2 mat-dialog-title>Add Blood Test Results</h2>
+
+<mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="fill">
+        <mat-label>AIDS</mat-label>
+        <mat-select [(ngModel)]="aids">
+            <mat-option value="true"> Yes </mat-option>
+            <mat-option value="false"> No </mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Leukemia</mat-label>
+        <mat-select [(ngModel)]="leukemia">
+            <mat-option value="true"> Yes </mat-option>
+            <mat-option value="false"> No </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br/>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Hepatitis B</mat-label>
+        <mat-select [(ngModel)]="hepatitisB">
+            <mat-option value="true"> Yes </mat-option>
+            <mat-option value="false"> No </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Hepatitis C</mat-label>
+        <mat-select [(ngModel)]="hepatitisC">
+            <mat-option value="true"> Yes </mat-option>
+            <mat-option value="false"> No </mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <br/>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Pox</mat-label>
+        <mat-select [(ngModel)]="pox">
+            <mat-option value="true"> Yes </mat-option>
+            <mat-option value="false"> No </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Thrombocytes</mat-label>
+            <input matInput type="number" [formControl]="thrombocytes" placeholder="Ex: ana.marinescu">
+        </mat-form-field>
+
+    <br/>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Hemoglobin</mat-label>
+            <input matInput type="number" [formControl]="hemoglobin" placeholder="Ex: ana.marinescu">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Cholesterol</mat-label>
+            <input matInput type="number" [formControl]="cholesterol" placeholder="Ex: ana.marinescu">
+        </mat-form-field>
+
+    <br/>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Leukocytes</mat-label>
+            <input matInput type="number" [formControl]="leukocytes" placeholder="Ex: ana.marinescu">
+        </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close="register" (click)="onAdd()">Add Results</button>
+</mat-dialog-actions>

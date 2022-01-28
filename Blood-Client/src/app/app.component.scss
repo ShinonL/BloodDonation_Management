@@ -3,10 +3,14 @@ body {
 }
 
 img {
-  height: 60px; 
+  height: 60px;
   padding-top: 12px;
 }
 
 .spacer {
   flex: 1 1 auto;
+}
+
+.toolbar {
+  margin-left: 10px;
 }
