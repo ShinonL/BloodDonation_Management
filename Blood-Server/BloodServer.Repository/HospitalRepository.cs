@@ -26,14 +26,14 @@ namespace BloodServer.Repository
             return _dbContext.Authorizations.ToList();
         }
 
-        public Hospital GetById(int id)
+        public Hospital GetById(string id)
         {
-            return _dbContext.Hospitals.FirstOrDefault(h => h.Id == id);
+            return _dbContext.Hospitals.FirstOrDefault(h => h.Id.Equals(id));
         }
 
-        public void Delete(int id)
+        public void Delete(string id)
         {
-            var request = _dbContext.staff.FirstOrDefault(r => r.Id == id);
+            var request = _dbContext.staff.FirstOrDefault(r => r.Id.Equals(id));
             _dbContext.staff.Remove(request);
             _dbContext.SaveChanges();
         }
@@ -50,26 +50,26 @@ namespace BloodServer.Repository
             _dbContext.SaveChanges();
         }
 
-        public IEnumerable<Appointment> GetAppointments(int id)
+        public IEnumerable<Appointment> GetAppointments(string id)
         {
-            return _dbContext.Appointments.Include(a => a.BloodTests).Where(a => a.UserId == id).ToList();
+            return _dbContext.Appointments.Include(a => a.BloodTests).Where(a => a.UserId.Equals(id)).ToList();
         }
 
-        public IEnumerable<Appointment> GetUnconfirmedAppointments(int id)
+        public IEnumerable<Appointment> GetUnconfirmedAppointments(string id)
         {
-            var hospitalId = _dbContext.staff.FirstOrDefault(s => s.Id == id).HospitalId;
+            var hospitalId = _dbContext.staff.FirstOrDefault(s => s.Id.Equals(id)).HospitalId;
             return _dbContext.Appointments.Include(a => a.User).Include(a => a.Hospital).Where(a => a.HospitalId == hospitalId && a.Confirmed == false);
         }
 
-        public IEnumerable<Appointment> GetConfirmedAppointments(int id)
+        public IEnumerable<Appointment> GetConfirmedAppointments(string id)
         {
-            var hospitalId = _dbContext.staff.FirstOrDefault(s => s.Id == id).HospitalId;
+            var hospitalId = _dbContext.staff.FirstOrDefault(s => s.Id.Equals(id)).HospitalId;
             return _dbContext.Appointments.Include(a => a.User).Include(a => a.Hospital).Include(a => a.BloodTests).Where(a => a.HospitalId == hospitalId && a.Confirmed == true);
         }
 
-        public void ConfirmAppointment(int id)
+        public void ConfirmAppointment(string id)
         {
-            var appointment = _dbContext.Appointments.Include(a => a.User).FirstOrDefault(a => a.Id == id);
+            var appointment = _dbContext.Appointments.Include(a => a.User).FirstOrDefault(a => a.Id.Equals(id));
             appointment.Confirmed = true;
 
             _dbContext.Update(appointment);

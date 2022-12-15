@@ -6,8 +6,8 @@ namespace BloodServer.DTO
 {
     public class BloodTestDTO
     {
-        public int Id { get; set; }
-        public int? AppointmentId { get; set; }
+        public string Id { get; set; }
+        public string? AppointmentId { get; set; }
         public bool? Aids { get; set; }
         public bool? Leukemia { get; set; }
         public bool? HepatitisB { get; set; }

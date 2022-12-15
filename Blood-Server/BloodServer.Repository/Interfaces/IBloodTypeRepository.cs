@@ -9,6 +9,6 @@ namespace BloodServer.Repository.Interfaces
     public interface IBloodTypeRepository
     {
         public Task<IEnumerable<BloodType>> GetBloodTypes();
-        public BloodType GetById(int id);
+        public BloodType GetById(string id);
     }
 }

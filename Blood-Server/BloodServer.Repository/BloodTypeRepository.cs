@@ -17,9 +17,9 @@ namespace BloodServer.Repository
             return await _dbContext.BloodTypes.ToListAsync();
         }
 
-        public BloodType GetById(int id)
+        public BloodType GetById(string id)
         {
-            return _dbContext.BloodTypes.FirstOrDefault(b => b.Id == id);
+            return _dbContext.BloodTypes.FirstOrDefault(b => b.Id.Equals(id));
         }
     }
 }

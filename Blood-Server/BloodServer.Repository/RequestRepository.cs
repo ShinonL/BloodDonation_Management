@@ -19,22 +19,22 @@ namespace BloodServer.Repository
             _dbContext.SaveChanges();
         }
 
-        public void Delete(int id)
+        public void Delete(string id)
         {
-            var request = _dbContext.Requests.FirstOrDefault(r => r.Id == id);
+            var request = _dbContext.Requests.FirstOrDefault(r => r.Id.Equals(id));
             _dbContext.Requests.Remove(request);
             _dbContext.SaveChanges();
         }
 
-        public IEnumerable<Request> GetAll(int id)
+        public IEnumerable<Request> GetAll(string id)
         {
-            var hospitalId = _dbContext.staff.FirstOrDefault(s => s.Id == id).HospitalId;
+            var hospitalId = _dbContext.staff.FirstOrDefault(s => s.Id.Equals(id)).HospitalId;
             return _dbContext.Requests.Include(r => r.Blood).Include(r => r.Staff).Where(r => r.Staff.HospitalId == hospitalId).ToList();
         }
 
-        public void ConfirmRequest(int id)
+        public void ConfirmRequest(string id)
         {
-            var request = _dbContext.Requests.FirstOrDefault(r => r.Id == id);
+            var request = _dbContext.Requests.FirstOrDefault(r => r.Id.Equals(id));
             request.Confirmed = true;
 
             _dbContext.Requests.Update(request);

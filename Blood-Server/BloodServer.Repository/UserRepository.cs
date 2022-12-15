@@ -27,9 +27,9 @@ namespace BloodServer.Repository
             return _dbContext.staff.FirstOrDefault(u => u.Username == username && u.Password == password);
         }
 
-        public Authorization GetAuthById(int id)
+        public Authorization GetAuthById(string id)
         {
-            return _dbContext.Authorizations.FirstOrDefault(a => a.Id == id);
+            return _dbContext.Authorizations.FirstOrDefault(a => a.Id.Equals(id));
         }
         public IEnumerable<User> GetAll()
         {

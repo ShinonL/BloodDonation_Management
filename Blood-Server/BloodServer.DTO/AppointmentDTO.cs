@@ -7,11 +7,11 @@ namespace BloodServer.DTO
 {
     public class AppointmentDTO
     {
-        public int Id { get; set; }
-        public int UserId { get; set; }
+        public string Id { get; set; }
+        public string UserId { get; set; }
         public HospitalDTO? Hospital { get; set; }
         public DateTime AppointmentDe { get; set; }
-        public int? RequestId { get; set; }
+        public string? RequestId { get; set; }
         public bool? Confirmed { get; set; }
         public bool? HasResults { get; set; }
         public BloodTestDTO BloodTest { get; set; }

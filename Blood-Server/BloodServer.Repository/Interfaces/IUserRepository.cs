@@ -10,7 +10,7 @@ namespace BloodServer.Repository.Interfaces
         public void CreateUser(User user);
         public User GetByUser(string username, string password);
         public staff GetByCredentials(string username, string password);
-        public Authorization GetAuthById(int id);
+        public Authorization GetAuthById(string id);
         public IEnumerable<User> GetAll();
     }
 }

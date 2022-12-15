@@ -10,12 +10,12 @@ namespace BloodServer.Repository.Interfaces
     {
         public void CreateRequest(Request request);
 
-        public IEnumerable<Request> GetAll(int id);
+        public IEnumerable<Request> GetAll(string id);
 
-        public void ConfirmRequest(int id);
+        public void ConfirmRequest(string id);
 
         public IEnumerable<Request> GetAllReq();
 
-        public void Delete(int id);
+        public void Delete(string id);
     }
 }
