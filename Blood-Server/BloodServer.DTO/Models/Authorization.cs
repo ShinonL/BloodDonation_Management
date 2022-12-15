@@ -12,7 +12,7 @@ namespace BloodServer.DTO.Models
             staff = new HashSet<staff>();
         }
 
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Role { get; set; }
         public bool? CanRequest { get; set; }
         public bool? CanSupervise { get; set; }

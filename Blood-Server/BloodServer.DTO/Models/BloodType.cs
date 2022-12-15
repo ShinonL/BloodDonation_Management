@@ -14,7 +14,7 @@ namespace BloodServer.DTO.Models
             Users = new HashSet<User>();
         }
 
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Blood { get; set; }
         public bool? Rh { get; set; }
 

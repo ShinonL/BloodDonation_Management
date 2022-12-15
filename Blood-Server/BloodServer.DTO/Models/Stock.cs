@@ -7,9 +7,9 @@ namespace BloodServer.DTO.Models
 {
     public partial class Stock
     {
-        public int Id { get; set; }
-        public int? HospitalId { get; set; }
-        public int? BloodId { get; set; }
+        public string Id { get; set; }
+        public string? HospitalId { get; set; }
+        public string? BloodId { get; set; }
         public double? Quantity { get; set; }
 
         public virtual BloodType Blood { get; set; }
