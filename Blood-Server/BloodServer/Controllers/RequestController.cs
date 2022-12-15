@@ -38,7 +38,7 @@ namespace BloodServer.Controllers
         }
 
         [HttpGet("get-all/{id}")]
-        public IActionResult GetAllByStaffId(int id)
+        public IActionResult GetAllByStaffId(string id)
         {
             IActionResult result;
 
@@ -56,7 +56,7 @@ namespace BloodServer.Controllers
         }
 
         [HttpGet("delete/{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(string id)
         {
             IActionResult result = Ok();
 
@@ -91,7 +91,7 @@ namespace BloodServer.Controllers
         }
 
         [HttpPost("confirm")]
-        public IActionResult ConfrimRequest([FromBody] int id)
+        public IActionResult ConfrimRequest([FromBody] string id)
         {
             IActionResult result = Ok();
 

@@ -29,7 +29,7 @@ namespace BloodServer.Service
             }).ToList();
         }
 
-        public BloodTypeDTO GetById(int id)
+        public BloodTypeDTO GetById(string id)
         {
             var model = _bloodTypeRepository.GetById(id);
             return new BloodTypeDTO

@@ -69,7 +69,7 @@ namespace BloodServer.Controllers
         }
 
         [HttpGet("delete/{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(string id)
         {
             IActionResult result = Ok();
 
@@ -86,7 +86,7 @@ namespace BloodServer.Controllers
         }
 
         [HttpPost("create-app/{id}")]
-        public IActionResult CreateAppointmentId([FromBody] AppointmentDTO appointment, int id)
+        public IActionResult CreateAppointmentId([FromBody] AppointmentDTO appointment, string id)
         {
             IActionResult result = Ok();
             try
@@ -101,25 +101,25 @@ namespace BloodServer.Controllers
         }
 
         [HttpGet("get-appointments/{id}")]
-        public IActionResult GetAppointments(int id)
+        public IActionResult GetAppointments(string id)
         {
             return Ok(_hospitalService.GetAppointments(id));
         }
 
         [HttpGet("get-unconfirmed-appointments/{id}")]
-        public IActionResult GetUnconfirmedAppointments(int id)
+        public IActionResult GetUnconfirmedAppointments(string id)
         {
             return Ok(_hospitalService.GetUnconfirmedAppointments(id));
         }
 
         [HttpGet("get-confirmed-appointments/{id}")]
-        public IActionResult GetConfirmedAppointments(int id)
+        public IActionResult GetConfirmedAppointments(string id)
         {
             return Ok(_hospitalService.GetConfirmedAppointments(id));
         }
 
         [HttpPost("confirm-appointment")]
-        public IActionResult ConfirmAppointment([FromBody]int id)
+        public IActionResult ConfirmAppointment([FromBody] string id)
         {
             IActionResult result = Ok();
             try

@@ -36,7 +36,7 @@ namespace BloodServer.Service
             _requestRepository.CreateRequest(request);
         }
 
-        public IEnumerable<RequestDTO> GetAll(int id)
+        public IEnumerable<RequestDTO> GetAll(string id)
         {
             var requests = _requestRepository.GetAll(id).Select(
                 request => { 
@@ -45,7 +45,7 @@ namespace BloodServer.Service
                         Id = request.Id,
                         TargetFirstName = request.TargetFirstName,
                         TargetLastName = request.TargetLastName,
-                        Blood = _bloodTypeService.GetById(request.BloodId ?? 0),
+                        Blood = _bloodTypeService.GetById(request.BloodId ?? "6399f3bb41888565fca4ba36"),
                         Illness = request.Illness,
                         StaffId = request.StaffId,
                         RequestDate = request.RequestDate,
@@ -67,7 +67,7 @@ namespace BloodServer.Service
                         Id = request.Id,
                         TargetFirstName = request.TargetFirstName,
                         TargetLastName = request.TargetLastName,
-                        Blood = _bloodTypeService.GetById(request.BloodId ?? 0),
+                        Blood = _bloodTypeService.GetById(request.BloodId ?? "6399f3bb41888565fca4ba36"),
                         Illness = request.Illness,
                         Hospital = new HospitalDTO
                         {
@@ -85,12 +85,12 @@ namespace BloodServer.Service
             return requests;
         }
 
-        public void ConfirmRequest(int id)
+        public void ConfirmRequest(string id)
         {
             _requestRepository.ConfirmRequest(id);
         }
 
-        public void Delete(int id)
+        public void Delete(string id)
         {
             _requestRepository.Delete(id);
         }

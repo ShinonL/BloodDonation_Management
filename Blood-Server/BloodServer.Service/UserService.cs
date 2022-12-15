@@ -36,12 +36,12 @@ namespace BloodServer.Service
             _userRepository.CreateUser(newUser);
         }
 
-        public int GetUserId(UserDTO user)
+        public string GetUserId(UserDTO user)
         {
             var result = _userRepository.GetByUser(user.Username, user.Password);
 
             if (result == null)
-                return -1;
+                return "";
 
             return result.Id;
         }
@@ -56,7 +56,7 @@ namespace BloodServer.Service
             return result;
         }
 
-        public string GetStaffRole(int id)
+        public string GetStaffRole(string id)
         {
             return _userRepository.GetAuthById(id).Role;
         }

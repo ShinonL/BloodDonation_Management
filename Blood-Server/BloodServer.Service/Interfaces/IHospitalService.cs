@@ -10,16 +10,16 @@ namespace BloodServer.Service.Interfaces
         public IEnumerable<HospitalDTO> GetAll();
         public IEnumerable<StaffDTO> GetStaff();
         public IEnumerable<AuthorizationDTO> GetRoles();
-        public HospitalDTO GetById(int id);
+        public HospitalDTO GetById(string id);
 
-        public IEnumerable<AppointmentDTO> GetAppointments(int id);
-        public IEnumerable<AppointmentDTO> GetUnconfirmedAppointments(int id);
-        public IEnumerable<AppointmentDTO> GetConfirmedAppointments(int id);
+        public IEnumerable<AppointmentDTO> GetAppointments(string id);
+        public IEnumerable<AppointmentDTO> GetUnconfirmedAppointments(string id);
+        public IEnumerable<AppointmentDTO> GetConfirmedAppointments(string id);
         public void CreateAppointment(AppointmentDTO appointment);
-        public void ConfirmAppointment(int id);
+        public void ConfirmAppointment(string id);
         public void AddBloodTest(BloodTestDTO bloodTestDTO);
-        public void CreateAppointmentWithRequest(AppointmentDTO app, int id);
+        public void CreateAppointmentWithRequest(AppointmentDTO app, string id);
         public void CreateStaff(StaffDTO staffDTO);
-        public void Delete(int id);
+        public void Delete(string id);
     }
 }

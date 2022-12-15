@@ -9,11 +9,11 @@ namespace BloodServer.Service.Interfaces
     {
         public void CreateRequest(RequestDTO requestDTO);
 
-        public IEnumerable<RequestDTO> GetAll(int id);
+        public IEnumerable<RequestDTO> GetAll(string id);
 
         public IEnumerable<RequestDTO> GetAllReq();
 
-        public void ConfirmRequest(int id);
-        public void Delete(int id);
+        public void ConfirmRequest(string id);
+        public void Delete(string id);
     }
 }

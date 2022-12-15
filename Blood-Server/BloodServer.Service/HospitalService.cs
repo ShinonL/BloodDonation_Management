@@ -89,12 +89,12 @@ namespace BloodServer.Service
             };
             _hospitalRepository.CreateStaff(staff);
         }
-        public void Delete(int id)
+        public void Delete(string id)
         {
             _hospitalRepository.Delete(id);
         }
 
-        public HospitalDTO GetById(int id)
+        public HospitalDTO GetById(string id)
         {
             var model = _hospitalRepository.GetById(id);
             return new HospitalDTO
@@ -119,7 +119,7 @@ namespace BloodServer.Service
             _hospitalRepository.CreateAppointment(app);
         }
 
-        public void CreateAppointmentWithRequest(AppointmentDTO appointment, int id)
+        public void CreateAppointmentWithRequest(AppointmentDTO appointment, string id)
         {
             var app = new Appointment
             {
@@ -132,7 +132,7 @@ namespace BloodServer.Service
             _hospitalRepository.CreateAppointment(app);
         }
 
-        public IEnumerable<AppointmentDTO> GetAppointments(int id)
+        public IEnumerable<AppointmentDTO> GetAppointments(string id)
         {
             var appointments = _hospitalRepository.GetAppointments(id);
                 
@@ -142,7 +142,7 @@ namespace BloodServer.Service
                     var appointmentDTO = new AppointmentDTO
                     {
                         Id = appointment.Id,
-                        Hospital = GetById(appointment.HospitalId ?? 0),
+                        Hospital = GetById(appointment.HospitalId ?? ""),
                         AppointmentDe = appointment.AppointmentDe ?? DateTime.Now,
                         Confirmed = appointment.Confirmed,
                         BloodTest = (appointment.BloodTests.Count() > 0) ? new BloodTestDTO
@@ -165,7 +165,7 @@ namespace BloodServer.Service
             return test;
         }
 
-        public IEnumerable<AppointmentDTO> GetUnconfirmedAppointments(int id)
+        public IEnumerable<AppointmentDTO> GetUnconfirmedAppointments(string id)
         {
             var appointments = _hospitalRepository.GetUnconfirmedAppointments(id);
 
@@ -194,7 +194,7 @@ namespace BloodServer.Service
                         Phone = appointment.User.Phone,
                         Email = appointment.User.Email,
                         Cnp = appointment.User.Cnp,
-                        Blood = _bloodService.GetById(appointment.User.BloodId ?? 1)
+                        Blood = _bloodService.GetById(appointment.User.BloodId ?? "6399f3bb41888565fca4ba36")
                     }
                 };
                 return appointmentDTO;
@@ -202,7 +202,7 @@ namespace BloodServer.Service
             return test;
         }
 
-        public IEnumerable<AppointmentDTO> GetConfirmedAppointments(int id)
+        public IEnumerable<AppointmentDTO> GetConfirmedAppointments(string id)
         {
             var appointments = _hospitalRepository.GetConfirmedAppointments(id);
 
@@ -231,7 +231,7 @@ namespace BloodServer.Service
                         Phone = appointment.User.Phone,
                         Email = appointment.User.Email,
                         Cnp = appointment.User.Cnp,
-                        Blood = _bloodService.GetById(appointment.User.BloodId ?? 1)
+                        Blood = _bloodService.GetById(appointment.User.BloodId ?? "6399f3bb41888565fca4ba36")
                     },
                     HasResults = (appointment.BloodTests.Count() == 0) ? false : true
                 };
@@ -240,7 +240,7 @@ namespace BloodServer.Service
             return test;
         }
 
-        public void ConfirmAppointment(int id)
+        public void ConfirmAppointment(string id)
         {
             _hospitalRepository.ConfirmAppointment(id);
         }

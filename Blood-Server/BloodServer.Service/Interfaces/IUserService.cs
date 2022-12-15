@@ -9,9 +9,9 @@ namespace BloodServer.Service.Interfaces
     public interface IUserService
     {
         public void CreateUser(UserDTO user);
-        public int GetUserId(UserDTO user);
+        public string GetUserId(UserDTO user);
         public staff GetStaffId(string username, string password);
-        public string GetStaffRole(int id);
+        public string GetStaffRole(string id);
         public IEnumerable<UserDTO> GetAll();
     }
 }
